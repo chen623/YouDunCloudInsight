@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-youdun-cloudinsight" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>YouDunCloudInsight</name>
+    <js-module name="YouDunCloudInsight" src="www/YouDunCloudInsight.js">
+        <clobbers target="cordova.plugins.YouDunCloudInsight"/>
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*" >
+            <feature name="YouDunCloudInsight">
+                <param name="android-package" value="com.longyang.cordova.youdun.cloudinsight.YouDunCloudInsight"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/YouDunCloudInsight.java" target-dir="src/com/longyang/cordova/youdun/cloudinsight"/>
+		<lib-file src="src/android/lib/AndroidSDKV40ll20181102.aar" />
+		<framework src="src/android/custom.gradle" custom="true" type="gradleReference" />
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest" mode="merge">
+            <uses-permission android:name="android.permission.INTERNET"/>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+			<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+			<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.CAMERA"/>
+			<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+			<uses-permission android:name="android.permission.VIBRATE"/>
+			<uses-permission android:name="android.permission.FLASHLIGHT"/>
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+			<uses-permission android:name="android.permission.BATTERY_STATS"/>    
+			<uses-permission android:name="android.permission.BLUETOOTH"/>
+			<uses-feature android:name="android.hardware.camera"/>
+			<uses-feature android:name="android.hardware.camera.autofocus"/>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application" mode="merge" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="YouDunCloudInsight">
+                <param name="ios-package" value="YouDunCloudInsight"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/YouDunCloudInsight.m"/>
+    </platform>
+</plugin>

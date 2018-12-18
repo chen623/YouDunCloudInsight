@@ -1,0 +1,7 @@
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.aar')
+	compile 'com.android.support:appcompat-v7:25.1.0'
+	compile 'com.android.support:support-v13:25.1.0'
+	compile 'com.google.code.gson:gson:2.4'
+}

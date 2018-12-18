@@ -1,0 +1,14 @@
+{
+  "name": "YouDunCloudInsight",
+  "version": "0.0.1",
+  "description": "有盾云慧眼sdk",
+  "cordova": {
+    "id": "com.longyang.cordova.youdun.cloudinsight.YouDunCloudInsight",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "chenlei",
+  "license": "ISC"
+}
