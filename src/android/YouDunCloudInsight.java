@@ -3,12 +3,7 @@ package com.longyang.cordova.youdun.cloudinsight;
 import com.authreal.api.AuthBuilder;
 import com.authreal.api.FVSdk;
 import com.authreal.api.OnResultListener;
-
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaInterface;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.LOG;
+import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
